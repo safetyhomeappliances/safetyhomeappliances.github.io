@@ -89,7 +89,7 @@ YII_CSRF_TOKEN='1020f7427284668bf480def2827820afe6172d1e';
 
 <a href="mailto:safetyhomeappliances@gmail.com?subject=From%20my%20vCard&amp;body=" target="_newEmail" ng-show="!loadDemo &amp;&amp; (view.email)">
     <i class="icon-send dynamicTextColor"></i>
-    <small class="dynamicTextColor">Company</small>
+    <small class="dynamicTextColor">Mail</small>
 </a>
 
 <a ng-show="((view.street || view.city )&amp;&amp; view.show_directions)" ng-click="callAction($event, &#39;mapAction&#39;)" class="last-element">
@@ -153,6 +153,7 @@ YII_CSRF_TOKEN='1020f7427284668bf480def2827820afe6172d1e';
     <div class="vcard-row" ng-show="view.company">
         <i class="icon icon-work"></i>
         <h4 class="ng-binding">Safety Home Appliances</h4>
+         <small>Company</small>
         <small ng-show="view.job" class="ng-binding ng-hide"></small>
     </div>
     <div class="vcard-separator" ng-show="view.venue || view.city || view.state || view.zip || view.street || view.country"></div>
