@@ -7,6 +7,29 @@
 YII_CSRF_TOKEN='1020f7427284668bf480def2827820afe6172d1e';
 /*]]>*/
 </script>
+<style>
+b:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+b:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+b:hover {
+  color: light-blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+b:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+
 <title>Surinder Singh</title>
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -128,7 +151,7 @@ YII_CSRF_TOKEN='1020f7427284668bf480def2827820afe6172d1e';
     <div class="vcard-row" ng-show="view.bio">
         <!-- <h4 ng-bind-html="view.bio|nl2br" class="ng-binding">We manufacture motor coupler of all the leading brands.</h4> -->
         <!-- <br><h4>For Latest Price List (w.e.f. 01/12/2020)<a href="~/https://rebrand.ly/5go78t9" target=blank>Click Here</a></h4> -->
-        <br><h4>For Latest Price List (w.e.f. 01/12/2020) <a href="/files/SAFETY-PRICE-LIST-WEF-01-12-2020.pdf" target="_blank">Click Here</a></h4>
+        <br><h4>For Latest Price List (w.e.f. 01/12/2020)  <a href="/files/SAFETY-PRICE-LIST-WEF-01-12-2020.pdf" target="_blank"><u>Click Here</u></a></h4>
     </div>
 
     <div class="vcard-separator" ng-show="view.bio"></div>
@@ -355,10 +378,12 @@ YII_CSRF_TOKEN='1020f7427284668bf480def2827820afe6172d1e';
                                         Directions will open in Google Maps.                                        Do you want to continue?                                    </div>
                                     <a class="event-slim-button ripplelink mt-10 pull-right" ng-style="{&#39;color&#39;: isColorLight(view.color2) ? &#39;black&#39; : view.color2}" ng-click="dialogRedirectCallback(false)" style="color: rgb(100, 181, 246);">
                                         No                                    </a>
+<!--                                     <a class="event-slim-button ripplelink mt-10 pull-right" ng-style="{&#39;color&#39;: isColorLight(view.color2) ? &#39;black&#39; : view.color2}" ng-click="dialogRedirectCallback(true, &#39;https://www.google.com/maps/dir//Safety+Home+Appliances,+A-96,+DSIIDC+Flatted+Complex,+Kirti+Nagar,+New+Delhi,+Delhi+110015" style="color: rgb(100, 181, 246);">
+                                        Yes                                    </a> -->
                                     <a class="event-slim-button ripplelink mt-10 pull-right" ng-style="{&#39;color&#39;: isColorLight(view.color2) ? &#39;black&#39; : view.color2}" ng-click="dialogRedirectCallback(true, &#39;https://maps.google.com/maps?daddr=&#39;+getMapAddress())" style="color: rgb(100, 181, 246);">
                                         Yes                                    </a>
                                 </div>
-                            </div>
+                            </div><!--https://www.google.com/maps/dir//Safety+Home+Appliances,+A-96,+DSIIDC+Flatted+Complex,+Kirti+Nagar,+New+Delhi,+Delhi+110015/@28.6428669,77.0707522,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x390d0369a3c22b6b:0x577b223083525cce!2m2!1d77.1407931!2d28.6428849-->
                         </div>
                     </div>
 
@@ -1059,7 +1084,8 @@ YII_CSRF_TOKEN='1020f7427284668bf480def2827820afe6172d1e';
                 if (address[address.length - 1] == ',')
                     address.slice(0, -1);
             }
-            return address;
+//            return address;
+            return "Safety+Home+Appliances,+A-96,+DSIIDC+Flatted+Complex,+Kirti+Nagar,+New+Delhi,+Delhi+110015";
         };
 
         /**
